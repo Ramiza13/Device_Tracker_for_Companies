@@ -1,0 +1,57 @@
+{% include "header.html"  %}
+        <br>
+        <br>
+        <br>
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="menu-content pb-60 col-lg-8">
+                    <div class="title text-center">
+                        <h1 class="mb-10">Add Employees of Company</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-12 justify-content-center">
+                <form method='post' action="">
+                  {% csrf_token %}
+                  <div class="pt-4">
+                    <label>Name of Employee</label>
+                    <input type="text" name="empName" class="form control"/>
+                  </div>
+
+
+                  <div class="pt-4">
+                    <label>Company Name</label>
+                    <input type="text" name="compName" class="form control"/>
+                  </div>
+
+                  <div class="pt-4">
+                    <label>Contact</label>
+                    <input type="text" name="contact" class="form control"/>
+                  </div>
+
+                  <div class="pt-4">
+                    <label>Email</label>
+                    <input type="email" name="email" class="form control"/>
+                  </div>
+
+
+                  <div class="pt-4">
+                    <button type="submit">Save</button>
+                  </div>
+                  
+                </form>  
+            </div>
+        </div>
+        
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+{% include "footer.html"  %}
+
+

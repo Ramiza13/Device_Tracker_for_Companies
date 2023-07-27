@@ -1,0 +1,56 @@
+submit=false
+{% include "header.html"  %}
+        <br>
+        <br>
+        <br>
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="menu-content pb-60 col-lg-8">
+                    <div class="title text-center">
+                        <h1 class="mb-10">See Information</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-12 justify-content-center">
+                <form method='post' action="">
+                  {% csrf_token %}
+                  <div class="pt-4">
+                    <label>Enter name of Employee</label>
+                    <input type="text" name="EmpName" class="form control"/>
+                  </div>
+
+                  <div class="pt-4">
+                    <label>Enter Company name</label>
+                    <input type="text" name="compname"/>
+                  </div>
+
+                  <div class="pt-4">
+                    <button type="submit" value='table'>Show Information</button>
+                  </div>
+                  
+                </form> 
+                
+            </div>
+        </div>
+
+        <div class="row">
+            {% for n in emp %}
+                 <div class="pt-4">
+                    <span class={{n.employeeName}}></span>
+                  </div>
+            {% endfor %}
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+{% include "footer.html"  %}
+
+
